@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="P1MOVIL2.Views.PageCreateEmple">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#FFE4D1">
+            <Label Text="ID Recordatorio:" FontSize="18" TextColor="Black"/>
+            <Entry x:Name="codigo" Placeholder="ID se Genera Automaticamente" Text="{Binding codigo}" IsEnabled="False" TextColor="Black"/>
+            <Label Text="Descripción:" FontSize="18" TextColor="Black"/>
+            <Entry x:Name="Nombre" Placeholder="Ingrese la Descripción" Text="{Binding nombre}" TextColor="Black"/>
+            <Label Text="Seleccione la Fecha:" FontSize="18" TextColor="Black"/>
+
+            <DatePicker MinimumDate="08/18/2022"
+            MaximumDate="12/31/2030"
+            Date="08/18/2022" 
+            TextColor="Black"            />
+
+
+            <Entry x:Name="Apellidos" Placeholder="Ingrese el Apellido" Text="{Binding apellidos}" IsVisible="false" TextColor="Black"/>
+            <Entry x:Name="Edad" Placeholder="Ingrese la Edad" Keyboard="Numeric" Text="{Binding edad}"  IsVisible="false" TextColor="Black"/>
+            <Label Text="Dirección:" FontSize="18"  IsVisible="false" TextColor="Black"/>
+            <Entry x:Name="direccion" Placeholder="Ingrese la Direccion" Text="{Binding direccion}"  IsVisible="false"/>
+            <Label Text="Puesto:" FontSize="18"  IsVisible="false"/>
+            <Entry x:Name="Ocupacion" Placeholder="Ingrese el Puesto de Trabajo" Text="{Binding ocupacion}" IsVisible="false"/>
+
+
+            <Button x:Name="btnfoto" Text="Tomar Foto" Clicked="btnfoto_Clicked" Padding="10,10,10,10" TextColor="Black" BackgroundColor="#FEB786" Margin="10, 30"/>
+            <Button x:Name="btnagregar" Text="Guardar" Clicked="btnagregar_Clicked" TextColor="Black" BackgroundColor="#FEB786" Margin="10, 0, 10, 0"/>
+            <Button Grid.Column="2" x:Name="btnborrar" Text="Eliminar" Clicked="btnborrar_Clicked" TextColor="Black" BackgroundColor="#FEB786" Margin="10, 0, 10, 0"/>
+            <Button Grid.Column="1" x:Name="btnactualizar" Text="Actualizar" Clicked="btnactualizar_Clicked" TextColor="Black" BackgroundColor="#FEB786" Margin="10, 0, 10, 0"/>
+           
+            
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

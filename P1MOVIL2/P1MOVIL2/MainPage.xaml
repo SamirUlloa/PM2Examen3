@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="P1MOVIL2.MainPage">
+
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="Bienvenido a Xamarin.Forms!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+        
+        <Entry Keyboard="Plain" Placeholder="Ingrese su Nombre" VerticalOptions="CenterAndExpand" x:Name="txtnombre"/>
+        <Entry Keyboard="Numeric" Placeholder="Ingrese su Edad" VerticalOptions="CenterAndExpand" x:Name="txtedad"/>
+
+        <Picker Title="Seleccione una Ocupacion"
+        TitleColor="LightBlue" x:Name="txtocupacion">
+            <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Ingeniero en Sistemas</x:String>
+                        <x:String>Ingeniero Bioquimico</x:String>
+                     </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+        
+        <Entry Keyboard="Plain" Placeholder="Ingrese su Pais" VerticalOptions="CenterAndExpand" x:Name="txtpais"/>
+        <Button Text="Ir a la segunda pantalla" x:Name="btnpagina" Clicked="btnpagina_Clicked" ></Button>
+    </StackLayout>
+
+</ContentPage>
+ 
